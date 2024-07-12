@@ -1,0 +1,27 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>My Page</title>
+          <formbg>
+            <form role="form"  action="/index" method="post">
+        </head>
+        <body>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for (var i = 0; i < data.length; i++) { %>
+                <tr>
+                  <td><%= data[i].price %></td>
+                  <td><%= data[i].type %></td>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </body>
+        </html>

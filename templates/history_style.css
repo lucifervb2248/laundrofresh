@@ -1,0 +1,154 @@
+body{
+	margin:0px;
+	padding: 0px;
+	background-color:white;
+	overflow: hidden;
+	font-family: system-ui;
+}
+.clearfix{
+	clear: both;
+}
+.popup{
+  width: 400px;
+  background: #d3d3d3;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0.1);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: black;
+  visibility: hidden;
+  transition: transform 0.4s top 0.4s;
+}
+.open-popup{
+  visibility: visible;
+  transform: translate(-50%,-50%) scale(1);
+}
+.popup img{
+  width: 100px;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.popup button1{
+  width: 100%;
+  padding: 10px 10px;
+  background:#6fd649;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.popup button2{
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px 10px;
+  background: rgb(241, 16, 5);
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.logo{
+	margin: 0px;
+	margin-left: 28px;
+  margin-right: 28px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 30px;
+}
+.logo span{
+	color:deepskyblue;
+}
+.sidenav {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:#222222;
+  overflow: hidden;
+  transition: 0.8s;
+  padding-top: 30px;
+}
+.sidenav a {
+  padding: 15px 8px 15px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 1s;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+  background-color:#1b203d;
+}
+.sidenav{
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+#main {
+  transition: margin-left 0.8s;
+  padding: 16px;
+  margin-left: 300px;
+}
+.head{
+  padding: 20px;
+}
+.col-div-6{
+	width: 50%;
+	float: left;
+}
+.profile{
+
+	float: right;
+	width: 160px;
+}
+.pro-img{
+	float: left;
+	width: 40px;
+	margin-top: 5px;
+}
+.profile p{
+	color: black;
+	font-weight: 500;
+	margin-left: 55px;
+	margin-top: 10px;
+	font-size: 15px;
+}
+.profile p span{
+	font-weight: 400;
+    font-size: 12px;
+    display: block;
+    color: #8e8b8b;
+}
+.col-div-8{
+	width: 100%;
+	float: left;
+}
+.nav2{
+	display: none;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    
+  }
+  td, th {
+    text-align: left;
+    padding:15px;
+    color: black;
+    border-bottom: 1px solid #24212140;
+  }
+
+

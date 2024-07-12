@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+    }
+    
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    }
+    
+    .header {
+    background-color:#333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    
+    }
+    
+    .register {
+    background-color: #f2f2f2;
+    padding: 75px;
+    text-align:start;
+    background-image: url(https://imgs.search.brave.com/u5U6Xf9FNpvufoWwP4joYGI-_lV1wkAMpezazJ3kBLw/rs:fit:1030:631:1/g:ce/aHR0cHM6Ly93d3cu/bHVjeXNsYXVuZHJ5/b2MuY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDIwLzA1L2Jp/Z3N0b2NrLUEtQ2xv/c2V1cC1PZi1BLUxh/dW5kcnktV29ya2Vy/LTI5ODQ0NTU1MS0x/MDMweDYzMS5qcGc);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    
+    
+    .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    }
+    
+    formbg
+    {
+        display:inline-block;
+        text-align: left;
+        backdrop-filter: blur(5px);
+        border-radius: 20px;
+    }
+    
+    form
+    {
+        display:inline-block;
+        text-align: left;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        border-radius: 20px;
+    }
+    label {
+    display: block;
+    margin-top: 10px;
+    }
+    
+    input[type=regno],input[type=name], input[type=password],input[type=cpassword],input[type=mobileno],input[type=roomno],input[type=block] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    }
+    
+    button[type=submit] {
+    background-color: #333;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    }
+    
+    .button{
+        background-color: #333;
+        align-items: center;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 10;
+    }
+    
+    button[type=submit]:hover {
+    background-color: rgb(54, 136, 169);
+    }
+    
+    button:hover {
+        background-color: rgb(54, 136, 169);
+    }
+    
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { background-color: rgb(54, 136, 169); }
+a:active { text-decoration: none; }

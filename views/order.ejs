@@ -1,0 +1,126 @@
+<!Doctype HTML>
+<html>
+<head>
+  <formbg>
+    <form role="form" action="/order" method="post">
+	<title>LaundroFresh | Dashboard</title>
+	<link rel="stylesheet" href="order_style.css" type="text/css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon"  type="x-icon" href="https://cdn-icons-png.flaticon.com/512/3322/3322056.png">
+</head>
+
+
+<body>
+	<div class="popup" id="popup">
+    <img src="logout.png">
+    <h2>Are you sure you want to log out?</h2>
+    <button1 type="button1" onclick="openLogin()">Yes</button1>
+    <button2 type="button2" onclick="closePopup()">Cancel</button2>
+  </div>
+	<div id="mySidenav" class="sidenav">
+	<p class="logo"><span>L</span>aundroFresh</p>
+  <a href="/dashboard" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
+  <a href="/order"class="icon-a"><i class="fa fa-shopping-bag icons"></i> &nbsp;&nbsp;Order Laundry</a>
+  <a href="/history"class="icon-a"><i class="fa fa-list icons"></i> &nbsp;&nbsp;Order History</a>
+  <a href="/profile"class="icon-a"><i class="fa fa-list-alt icons"></i> &nbsp;&nbsp;Update Profile </a>
+  <a href="#"class="icon-a" onclick="openPopup()"><i class="fa fa-user icons"></i> &nbsp;&nbsp;Log Out</a>
+</div>
+<div id="main">
+
+	<div class="head">
+		<div class="col-div-6">
+<span style="font-size:30px;cursor:pointer; color: black;" class="nav"  >&#9776; Order Laundry</span>
+<span style="font-size:30px;cursor:pointer; color: black;" class="nav2"  >&#9776; Order Laundry</span>
+</div>
+	
+	<div class="col-div-6">
+	<div class="profile">
+
+		<img src="user1.png" class="pro-img" />
+		<p>Welcome  <%=use.name%>!</p>
+	</div>
+</div>
+	<div class="clearfix"></div>
+</div>
+	<div class="col-div-8">
+		<div class="box-8">
+            <label for="type">Laundry Type:</label>
+            <select name="type" id="type" style="width: 150px;height:30px;text-align: center;" required>
+                <option value="dhobi" sstyle="width: 100px;height:30px ;">Dhobi</option>
+                <option value="machine" style="width: 100px;height:30px ;">Washing Machine</option>
+            </select>
+            <div class="number">
+              <p>Number of clothes:
+              <sp class="minus">-</sp>
+              <input name="text" type="text" value="1" required/>
+              <sp class="plus">+</sp></p>
+            </div>
+            <p>Cost per cloth: Rs 16</p>
+            <p>Total price:Rs <input name="price" id="price" type="number"  value="16" style="width: 100px;height:28px;text-align:left;background: none;border: none;font-size: 20px;"></p>
+            <button class="button"type="submit">Confirm order</button>
+		</div>
+	</div>
+	</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  $(".nav").click(function(){
+    $("#mySidenav").css('width','70px');
+    $("#main").css('margin-left','70px');
+    $(".logo").css('visibility', 'hidden');
+    $(".logo span").css('visibility', 'visible');
+     $(".logo span").css('margin-left', '-10px');
+     $(".icon-a").css('visibility', 'hidden');
+     $(".icons").css('visibility', 'visible');
+     $(".icons").css('margin-left', '-8px');
+      $(".nav").css('display','none');
+      $(".nav2").css('display','block');
+  });
+
+$(".nav2").click(function(){
+    $("#mySidenav").css('width','300px');
+    $("#main").css('margin-left','300px');
+    $(".logo").css('visibility', 'visible');
+     $(".icon-a").css('visibility', 'visible');
+     $(".icons").css('visibility', 'visible');
+     $(".nav").css('display','block');
+      $(".nav2").css('display','none');
+ });
+
+ $(document).ready(function() {
+			$('.minus').click(function () {
+				var $input = $(this).parent().find('input');
+				var count = parseInt($input.val()) - 1;
+				count = count < 1 ? 1 : count;
+				$input.val(count);
+        $('#price').prop('disabled', false);
+        $('#price').val($input.val()*16);
+        $('#price').prop('disabled', true);
+				$input.change();
+				return false;
+			});
+			$('.plus').click(function () {
+				var $input = $(this).parent().find('input');
+				$input.val(parseInt($input.val()) + 1);
+        $('#price').prop('disabled', false);
+        $('#price').val($input.val()*16);
+        $('#price').prop('disabled', true);
+				$input.change();
+				return false;
+			});
+		});
+</script>
+<script>
+  let pop=document.getElementById("popup");
+  function openPopup(){
+    popup.classList.add("open-popup");
+  }
+  function closePopup(){
+    popup.classList.remove("open-popup");
+  }
+  function openLogin(){
+    location.href="login.html";
+  }
+</script>
+</body>
+</html>
